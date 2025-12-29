@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | The Smile Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/07c42d6t3/ChatGPT%20Image%20Dec%2023,%202025,%2010_32_26%20PM.png?updatedAt=1766512616916</text></svg>">
+</head>
+<body class="donation-page">
+    <!-- Navigation Bar (same as index.html) -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">😊</div>
+                <h1>THE SMILE FOUNDATION</h1>
+            </a>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="shelter.html">Shelter</a></li>
+                        <li><a href="food.html">Food</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Donation Hero -->
+    <section class="donation-hero">
+        <div class="container">
+            <div class="donation-hero-content animate-on-scroll">
+                <h1>Make a Difference Today</h1>
+                <p>Your donation helps us provide education, shelter, food, and healthcare to those in need. Every contribution, big or small, creates a lasting impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Cards -->
+    <section class="impact-cards">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Your Donation's Impact</h2>
+                <p class="section-subtitle animate-on-scroll">See how your generosity changes lives</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>₹500</h3>
+                    <p>Provides nutritious meals for 5 children for a week</p>
+                </div>
+                
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>₹1,000</h3>
+                    <p>Supplies educational materials for 10 students for a month</p>
+                </div>
+                
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>₹2,500</h3>
+                    <p>Sponsors healthcare services for a family for 3 months</p>
+                </div>
+                
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>₹5,000</h3>
+                    <p>Helps build safe shelter for a homeless family</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Donation Section -->
+    <section class="qr-donation">
+        <div class="container">
+            <div class="qr-section-content">
+                <div class="qr-info animate-on-scroll">
+                    <h2>Scan to Donate</h2>
+                    <p>Use any UPI app like Google Pay, PhonePe, Paytm, or any banking app with UPI support to scan the QR code and make your donation.</p>
+                    
+                    <div class="upi-details">
+                        <div class="upi-id">
+                            <i class="fas fa-qrcode"></i>
+                            <div>
+                                <p class="label">UPI ID</p>
+                                <p class="value">8400956936-d958@ybl</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="note">100% of your donation goes directly to our programs. We are a registered non-profit organization.</p>
+                </div>
+                
+                <div class="qr-code-container animate-on-scroll">
+                    <div class="qr-code">
+                        <img src="https://ik.imagekit.io/07c42d6t3/WhatsApp%20Image%202025-12-28%20at%2011.jpeg" alt="UPI QR Code">
+                    </div>
+                    <p class="qr-instruction">Scan this QR code using any UPI app</p>
+                    
+                    <button id="payment-made-btn" class="btn btn-primary btn-large">
+                        <i class="fas fa-heart"></i> I've Made the Payment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form (hidden by default) -->
+    <section class="donation-form" style="display: none;">
+        <div class="container">
+            <div class="form-container animate-on-scroll">
+                <h2>Confirm Your Donation</h2>
+                <p>Please fill in your details so we can send you a donation certificate and receipt.</p>
+                
+                <form id="donation-form">
+                    <div class="form-group">
+                        <label for="donor-name">Full Name *</label>
+                        <input type="text" id="donor-name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="donor-email">Email Address *</label>
+                        <input type="email" id="donor-email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    
+                      <div class="form-group">
+                        <label for="donor-amount">Donation Amount *</label>
+                        <input type="text" id="donor-amount" name="amount" required placeholder="Enter donation amount">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="transaction-id">Transaction ID *</label>
+                        <input type="text" id="transaction-id" name="transaction_id" required placeholder="Enter UPI transaction ID">
+                        <small>You can find this in your UPI app transaction history</small>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Submit & Receive Certificate
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">😊</div>
+                        <h2>THE SMILE FOUNDATION</h2>
+                    </a>
+                    <p class="footer-description">Bringing hope and happiness to communities in need since 2005. Registered non-profit organization.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="annual.html">Annual Report</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="shelter.html">Shelter</a></li>
+                        <li><a href="food.html">Food Security</a></li>
+                        <li><a href="healthcare.html">Healthcare</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Hope Street, City, Country 12345</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@smilefoundation.org</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 The Smile Foundation. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition"></div>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>

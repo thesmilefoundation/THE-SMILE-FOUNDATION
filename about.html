@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | The Smile Foundation</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Hero Section */
+.about-hero {
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: linear-gradient(135deg,#3498db,#2ecc71);
+  color:white;
+  padding:100px 20px;
+  position:relative;
+  overflow:hidden;
+}
+.about-hero h1 {
+  font-size:3rem;
+  margin-bottom:20px;
+  opacity:0;
+  transform:translateY(30px);
+  animation: fadeUp 1s forwards 0.5s;
+}
+.about-hero p {
+  font-size:1.2rem;
+  max-width:700px;
+  opacity:0;
+  transform:translateY(30px);
+  animation: fadeUp 1s forwards 0.8s;
+}
+
+/* Story Section */
+.story-section {
+  padding:100px 20px;
+  background-color:var(--bg-white);
+}
+.story-content {
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+.story-content h2 {
+  font-size:2.5rem;
+  color:var(--text-dark);
+  margin-bottom:20px;
+}
+.story-content p {
+  font-size:1.1rem;
+  color:var(--text-light);
+  line-height:1.8;
+  margin-bottom:15px;
+  opacity:0;
+  transform:translateY(30px);
+  animation: fadeUp 1s forwards 0.5s;
+}
+
+/* Mission Vision */
+.mission-vision {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+  padding:100px 20px;
+}
+.mission-card {
+  background-color:var(--bg-light);
+  padding:40px 30px;
+  border-radius:var(--border-radius);
+  text-align:center;
+  box-shadow:var(--shadow);
+  transition:var(--transition);
+  opacity:0;
+  transform:translateY(30px);
+}
+.mission-card:hover { transform:translateY(-10px); box-shadow:var(--shadow-hover);}
+.mission-card i { font-size:3rem; color:var(--primary-color); margin-bottom:20px;}
+.mission-card h3 { font-size:1.8rem; margin-bottom:15px; color:var(--text-dark);}
+.mission-card p { color:var(--text-light); font-size:1.1rem;}
+
+/* Team Section */
+.team-section { padding:100px 20px; background-color:var(--bg-white);}
+.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:30px;}
+.team-card { background-color:var(--bg-light); border-radius:var(--border-radius); overflow:hidden; text-align:center; padding:30px 20px; box-shadow:var(--shadow); transition:var(--transition); opacity:0; transform:translateY(30px);}
+.team-card:hover { transform:translateY(-10px); box-shadow:var(--shadow-hover);}
+.team-card img { width:100%; border-radius:var(--border-radius); margin-bottom:15px;}
+.team-card h4 { font-size:1.3rem; margin-bottom:8px; color:var(--text-dark);}
+.team-card p { color:var(--text-light); font-size:1rem;}
+
+/* Animations */
+@keyframes fadeUp {
+  to { opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:1024px) { .mission-vision { grid-template-columns:1fr; } .team-grid { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:768px) { .team-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><div class="logo-icon">😊</div><h1>THE SMILE FOUNDATION</h1></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="#">Programs <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="nav-cta">About us</a></li>
+      <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="about-hero">
+  <h1 class="animate-on-scroll">About The Smile Foundation</h1>
+  <p class="animate-on-scroll">Empowering underprivileged children with education, shelter, food, and healthcare. Our mission is to create a safe, nurturing environment for every child to thrive.</p>
+</section>
+
+<!-- Story Section -->
+<section class="story-section">
+  <div class="story-content animate-on-scroll">
+    <h2>Our Story</h2>
+    <p>The Smile Foundation was founded to address the urgent needs of orphaned and underprivileged children. Over the years, we have evolved into a comprehensive organization providing education, shelter, nutrition, healthcare, and holistic development for children.</p>
+    <p>We have impacted thousands of lives through dedicated staff, volunteers, and partner organizations, empowering communities to build brighter futures and self-sufficient lifestyles.</p>
+  </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="mission-vision">
+  <div class="mission-card animate-on-scroll">
+    <i class="fas fa-bullseye"></i>
+    <h3>Our Mission</h3>
+    <p>Ensure every child has access to education, shelter, food, and healthcare, empowering them to reach their full potential in a safe and nurturing environment.</p>
+  </div>
+  <div class="mission-card animate-on-scroll">
+    <i class="fas fa-eye"></i>
+    <h3>Our Vision</h3>
+    <p>To create a world where no child suffers from neglect or deprivation, and every child is given the tools to thrive and succeed in life.</p>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Meet Our Team</h2>
+      <p class="section-subtitle">Dedicated professionals and volunteers committed to our cause</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
+        <h4>John Smith</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
+        <h4>Sarah Lee</h4>
+        <p>Head of Programs</p>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Team Member">
+        <h4>David Brown</h4>
+        <p>Operations Manager</p>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member">
+        <h4>Emily Davis</h4>
+        <p>Community Engagement</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <a href="index.html" class="footer-logo"><div class="logo-icon">😊</div><h2>THE SMILE FOUNDATION</h2></a>
+        <p class="footer-description">Bringing hope and wellness to children and communities.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Our Programs</h3>
+        <ul class="footer-links">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Hope Street</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@smilefoundation.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 The Smile Foundation. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll animation for animate-on-scroll
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, {threshold:0.1});
+  animateElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

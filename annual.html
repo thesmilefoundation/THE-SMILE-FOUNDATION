@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annual Report | The Smile Foundation</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Hero Section */
+.report-hero {
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: linear-gradient(135deg,#2ecc71,#3498db);
+  color:white;
+  padding:120px 20px;
+  position:relative;
+  overflow:hidden;
+}
+.report-hero h1 {
+  font-size:3.5rem;
+  margin-bottom:20px;
+  opacity:0;
+  transform:translateY(40px);
+  animation: fadeUp 1s forwards 0.5s;
+}
+.report-hero p {
+  font-size:1.3rem;
+  max-width:800px;
+  opacity:0;
+  transform:translateY(40px);
+  animation: fadeUp 1s forwards 0.8s;
+}
+.report-hero .btn {
+  margin-top:30px;
+}
+
+/* Impact Counters */
+.report-counters {
+  padding:100px 20px;
+  background-color:var(--bg-white);
+  text-align:center;
+}
+.counter-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+.counter-card {
+  background-color:var(--bg-light);
+  border-radius:var(--border-radius);
+  padding:50px 20px;
+  box-shadow:var(--shadow);
+  transition:var(--transition);
+  opacity:0;
+  transform:translateY(30px);
+}
+.counter-card:hover { transform:translateY(-10px); box-shadow:var(--shadow-hover);}
+.counter-number {
+  font-size:3rem;
+  font-weight:700;
+  color:var(--primary-color);
+  margin-bottom:10px;
+}
+.counter-label {
+  font-size:1.1rem;
+  color:var(--text-dark);
+}
+
+/* Achievements Section */
+.achievements {
+  padding:100px 20px;
+  background: linear-gradient(135deg,#3498db,#2ecc71);
+  color:white;
+  text-align:center;
+}
+.achievements h2 {
+  font-size:2.8rem;
+  margin-bottom:30px;
+}
+.achievement-cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+.achievement-card {
+  background-color:rgba(255,255,255,0.1);
+  padding:40px 30px;
+  border-radius:var(--border-radius);
+  transition:var(--transition);
+  opacity:0;
+  transform:translateY(30px);
+}
+.achievement-card:hover {
+  transform:translateY(-15px) scale(1.05);
+  box-shadow:var(--shadow-hover);
+}
+.achievement-card i { font-size:3rem; margin-bottom:15px; color:white; }
+.achievement-card h3 { font-size:1.8rem; margin-bottom:10px; }
+.achievement-card p { font-size:1.1rem; line-height:1.6; }
+
+/* Team Section */
+.team-section { padding:100px 20px; background-color:var(--bg-white);}
+.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:30px;}
+.team-card { background-color:var(--bg-light); border-radius:var(--border-radius); overflow:hidden; text-align:center; padding:30px 20px; box-shadow:var(--shadow); transition:var(--transition); opacity:0; transform:translateY(30px);}
+.team-card:hover { transform:translateY(-10px); box-shadow:var(--shadow-hover);}
+.team-card img { width:100%; border-radius:var(--border-radius); margin-bottom:15px;}
+.team-card h4 { font-size:1.3rem; margin-bottom:8px; color:var(--text-dark);}
+.team-card p { color:var(--text-light); font-size:1rem;}
+
+/* Animations */
+@keyframes fadeUp {
+  to { opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:1024px) { .counter-grid, .achievement-cards, .team-grid { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:768px) { .counter-grid, .achievement-cards, .team-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><div class="logo-icon">😊</div><h1>THE SMILE FOUNDATION</h1></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="#">Programs <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="nav-cta">About</a></li>
+      <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="report-hero">
+  <h1 class="animate-on-scroll">Annual Report 2025</h1>
+  <p class="animate-on-scroll">Celebrating the incredible achievements of The Smile Foundation in providing hope, care, and education to thousands of underprivileged children worldwide.</p>
+  <a href="#counters" class="btn btn-primary animate-on-scroll">View Our Impact</a>
+</section>
+
+<!-- Impact Counters -->
+<section class="report-counters" id="counters">
+  <div class="container">
+    <div class="counter-grid">
+      <div class="counter-card animate-on-scroll">
+        <span class="counter-number" data-target="12500">0</span>
+        <p class="counter-label">Children Educated</p>
+      </div>
+      <div class="counter-card animate-on-scroll">
+        <span class="counter-number" data-target="8500">0</span>
+        <p class="counter-label">Families Sheltered</p>
+      </div>
+      <div class="counter-card animate-on-scroll">
+        <span class="counter-number" data-target="235000">0</span>
+        <p class="counter-label">Meals Provided</p>
+      </div>
+      <div class="counter-card animate-on-scroll">
+        <span class="counter-number" data-target="7500">0</span>
+        <p class="counter-label">Medical Camps Conducted</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section class="achievements">
+  <h2 class="animate-on-scroll">Extraordinary Achievements in 2025</h2>
+  <div class="achievement-cards">
+    <div class="achievement-card animate-on-scroll">
+      <i class="fas fa-award"></i>
+      <h3>Global Recognition</h3>
+      <p>Our foundation has been recognized by international organizations for excellence in child welfare and community development. Awards and honors celebrate our tireless efforts in improving lives.</p>
+    </div>
+    <div class="achievement-card animate-on-scroll">
+      <i class="fas fa-hand-holding-heart"></i>
+      <h3>Community Impact</h3>
+      <p>We have empowered thousands of children and families, providing sustainable solutions in education, nutrition, healthcare, and emotional wellbeing. Every life transformed is a testament to our mission.</p>
+    </div>
+    <div class="achievement-card animate-on-scroll">
+      <i class="fas fa-chart-line"></i>
+      <h3>Record Growth</h3>
+      <p>In 2025 alone, we expanded our programs to new regions, increased outreach, and enhanced the quality of our initiatives, ensuring maximum positive impact for the communities we serve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Meet Our Champions</h2>
+      <p class="section-subtitle">Dedicated team members and volunteers driving our mission forward</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Team Member">
+        <h4>Alex Johnson</h4>
+        <p>Executive Director</p>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Team Member">
+        <h4>Linda Carter</h4>
+        <p>Program Head</p>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Team Member">
+        <h4>Michael Lee</h4>
+        <p>Operations Manager</p>
+      </div>
+      <div class="team-card animate-on-scroll">
+        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Team Member">
+        <h4>Rachel Kim</h4>
+        <p>Community Outreach</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <a href="index.html" class="footer-logo"><div class="logo-icon">😊</div><h2>THE SMILE FOUNDATION</h2></a>
+        <p class="footer-description">Spreading hope, care, and joy to children everywhere.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Programs</h3>
+        <ul class="footer-links">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Hope Street</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@smilefoundation.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 The Smile Foundation. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+// Animate-on-scroll
+const animateElements = document.querySelectorAll('.animate-on-scroll');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, {threshold:0.1});
+animateElements.forEach(el => observer.observe(el));
+
+// Counter Animation
+const counters = document.querySelectorAll('.counter-number');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / 200;
+    if(count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = target.toLocaleString();
+    }
+  };
+  updateCount();
+});
+</script>
+
+</body>
+</html>

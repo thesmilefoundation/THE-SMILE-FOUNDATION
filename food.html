@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Security Program | The Smile Foundation</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Hero floating shapes */
+.hero-bg .floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  animation: float-shape 20s infinite linear;
+  z-index:1;
+}
+.hero-bg .shape-1 { width:80px;height:80px;top:10%;left:10%;animation-delay:0s;}
+.hero-bg .shape-2 { width:120px;height:120px;top:20%;right:15%;animation-delay:5s;}
+.hero-bg .shape-3 { width:60px;height:60px;bottom:25%;left:20%;animation-delay:10s;}
+.hero-bg .shape-4 { width:100px;height:100px;bottom:15%;right:10%;animation-delay:15s;}
+.hero-bg .shape-5 { width:70px;height:70px;top:50%;left:5%;animation-delay:2s;}
+@keyframes float-shape {
+  0%,100% { transform: translateY(0) rotate(0deg);}
+  25% { transform: translateY(-30px) rotate(90deg);}
+  50% { transform: translateY(0) rotate(180deg);}
+  75% { transform: translateY(30px) rotate(270deg);}
+}
+
+/* Hero content */
+.hero { min-height:100vh; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; background: linear-gradient(135deg,#f7971e,#ffd200);}
+.hero-content { text-align:center; color:white; z-index:2; max-width:800px; padding:40px 20px; }
+.hero-buttons a { margin:10px; }
+
+/* Program cards animation */
+.program-card {
+  background-color:white;
+  border-radius:12px;
+  padding:40px 30px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  transition: var(--transition);
+  overflow:hidden;
+  position:relative;
+}
+.program-card:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  box-shadow: var(--shadow-hover);
+}
+.program-card .program-icon {
+  width:80px;height:80px;
+  background-color: rgba(46,204,113,0.1);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 25px;font-size:32px;color:var(--primary-color);
+  transition:var(--transition);
+}
+.program-card:hover .program-icon {
+  background-color: var(--primary-color);
+  color:white;
+  transform: rotateY(180deg);
+}
+
+/* Counter section */
+.counter-number { font-size:3rem; font-weight:700; color:var(--primary-color);}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><div class="logo-icon">😊</div><h1>THE SMILE FOUNDATION</h1></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="#">Programs <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+    <div class="floating-shape shape-4"></div>
+    <div class="floating-shape shape-5"></div>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">Fighting Hunger & Ensuring Nutrition</h1>
+    <p class="hero-subtitle">Delivering nutritious meals and food support to children and families in need</p>
+    <div class="hero-buttons">
+      <a href="#programs" class="btn btn-primary"><i class="fas fa-utensils"></i> Our Programs</a>
+      <a href="donate.html" class="btn btn-secondary"><i class="fas fa-hand-holding"></i> Support Food Security</a>
+    </div>
+  </div>
+</section>
+
+<!-- Programs Section -->
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Food Security Initiatives</h2>
+      <p class="section-subtitle">Providing meals, nutrition, and education on food to underprivileged communities</p>
+    </div>
+    <div class="program-cards">
+      <div class="program-card">
+        <div class="program-icon"><i class="fas fa-bread-slice"></i></div>
+        <h3>Meal Distribution</h3>
+        <p>Daily nutritious meals distributed to children and families in underserved areas.</p>
+      </div>
+      <div class="program-card">
+        <div class="program-icon"><i class="fas fa-apple-alt"></i></div>
+        <h3>Nutrition Education</h3>
+        <p>Workshops teaching families about balanced diets, vitamins, and healthy eating habits.</p>
+      </div>
+      <div class="program-card">
+        <div class="program-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Community Kitchens</h3>
+        <p>Setting up safe kitchens and food banks to provide sustainable access to nutritious food.</p>
+      </div>
+      <div class="program-card">
+        <div class="program-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>Emergency Food Relief</h3>
+        <p>Rapid response programs for families affected by natural disasters or crises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Counter Section -->
+<section class="impact-counter">
+  <div class="container">
+    <div class="counter-grid">
+      <div class="counter-item"><div class="counter-number" data-target="235000">0</div><div class="counter-label">Meals Provided</div></div>
+      <div class="counter-item"><div class="counter-number" data-target="12500">0</div><div class="counter-label">Children Educated</div></div>
+      <div class="counter-item"><div class="counter-number" data-target="8500">0</div><div class="counter-label">Families Sheltered</div></div>
+      <div class="counter-item"><div class="counter-number" data-target="7500">0</div><div class="counter-label">Medical Camps</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Support Our Food Security Mission</h2>
+    <p>With your help, we can continue providing meals, education, and sustainable food programs to children in need.</p>
+    <a href="donate.html" class="btn btn-primary">Donate for Food Security</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <a href="index.html" class="footer-logo"><div class="logo-icon">😊</div><h2>THE SMILE FOUNDATION</h2></a>
+        <p class="footer-description">Bringing hope and wellness to children and communities.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Our Programs</h3>
+        <ul class="footer-links">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Hope Street</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@smilefoundation.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 The Smile Foundation. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- JS for Counter -->
+<script>
+const counters = document.querySelectorAll('.counter-number');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const increment = target / 200;
+    if(count < target) { counter.innerText = Math.ceil(count + increment); setTimeout(updateCount,10);}
+    else counter.innerText = target;
+  };
+  updateCount();
+});
+</script>
+
+</body>
+</html>

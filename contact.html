@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | The Smile Foundation</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Hero Section */
+.contact-hero {
+  min-height:60vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: linear-gradient(135deg,#3498db,#2ecc71);
+  color:white;
+  padding:80px 20px;
+}
+.contact-hero h1 {
+  font-size:3rem;
+  margin-bottom:20px;
+  opacity:0;
+  transform:translateY(30px);
+  animation: fadeUp 1s forwards 0.5s;
+}
+.contact-hero p {
+  font-size:1.2rem;
+  max-width:700px;
+  opacity:0;
+  transform:translateY(30px);
+  animation: fadeUp 1s forwards 0.8s;
+}
+
+/* Contact Section */
+.contact-section {
+  padding:80px 20px;
+  background-color:var(--bg-white);
+}
+.contact-container {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+.contact-info {
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+.contact-info div {
+  display:flex;
+  align-items:center;
+  gap:15px;
+  font-size:1.1rem;
+  color:var(--text-dark);
+}
+.contact-info i { font-size:1.8rem; color:var(--primary-color);}
+.contact-form {
+  background-color:var(--bg-light);
+  padding:40px 30px;
+  border-radius:var(--border-radius);
+  box-shadow:var(--shadow);
+}
+.contact-form input, .contact-form textarea {
+  width:100%;
+  padding:15px;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  border-radius:var(--border-radius);
+  transition:0.3s;
+  font-size:1rem;
+}
+.contact-form input:focus, .contact-form textarea:focus { border-color:var(--primary-color); outline:none;}
+.contact-form button {
+  padding:15px 30px;
+  font-size:1rem;
+  border:none;
+  border-radius:var(--border-radius);
+  background-color:var(--primary-color);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+.contact-form button:hover { background-color:#27ae60; }
+
+/* Map Section */
+.map-section {
+  margin-top:50px;
+  width:100%;
+  height:400px;
+  border-radius:var(--border-radius);
+  overflow:hidden;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to { opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:1024px) { .contact-container { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo"><div class="logo-icon">😊</div><h1>THE SMILE FOUNDATION</h1></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="#">Programs <i class="fas fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="contact-hero">
+  <h1 class="animate-on-scroll">Get in Touch with Us</h1>
+  <p class="animate-on-scroll">Have questions or want to help? Reach out to The Smile Foundation — together we can bring smiles and hope to thousands of children.</p>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info animate-on-scroll">
+      <div><i class="fas fa-map-marker-alt"></i> 123 Hope Street, City, Country</div>
+      <div><i class="fas fa-phone"></i> +1 (555) 123-4567</div>
+      <div><i class="fas fa-envelope"></i> info@smilefoundation.org</div>
+      <div><i class="fas fa-globe"></i> www.smilefoundation.org</div>
+    </div>
+    
+    <!-- Contact Form -->
+   <form class="contact-form animate-on-scroll" method="POST" action="https://script.google.com/macros/s/AKfycbzRAXarlJiAqYGxo6MObZlKM-8XoeMjZxKL4abG2tbHz5xZ38DmhMsfnBJuLRO-Y437/exec">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section animate-on-scroll">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902837409207!2d90.39945291543149!3d23.75090399466827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b0b1f3911f%3A0x403f3eaf5b3f2443!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sin!4v1698298749658!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <a href="index.html" class="footer-logo"><div class="logo-icon">😊</div><h2>THE SMILE FOUNDATION</h2></a>
+        <p class="footer-description">Spreading hope, care, and joy to children everywhere.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Programs</h3>
+        <ul class="footer-links">
+          <li><a href="education.html">Education</a></li>
+          <li><a href="shelter.html">Shelter</a></li>
+          <li><a href="food.html">Food Security</a></li>
+          <li><a href="healthcare.html">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Hope Street</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-envelope"></i> info@smilefoundation.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 The Smile Foundation. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+// Animate-on-scroll
+const animateElements = document.querySelectorAll('.animate-on-scroll');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, {threshold:0.1});
+animateElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
