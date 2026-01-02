@@ -1,235 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Smile Foundation | Bringing Hope & Happiness</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/07c42d6t3/ChatGPT%20Image%20Dec%2023,%202025,%2010_32_26%20PM.png?updatedAt=1766512616916</text></svg>">
+<meta charset="UTF-8">
+<title>XPS videos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  background:#0b0b0b;
+  color:white;
+  font-family:Segoe UI, Arial;
+}
+header{
+  text-align:center;
+  padding:20px;
+  font-size:30px;
+  background:#111;
+  box-shadow:0 5px 25px black;
+}
+.characters{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:18px;
+  padding:25px;
+}
+.card{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+  cursor:pointer;
+  background:#161616;
+  animation:pop .6s ease;
+}
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  transition:.4s;
+}
+.card:hover img{
+  transform:scale(1.15);
+  filter:brightness(1.2);
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.9),transparent);
+  opacity:0;
+  transition:.3s;
+}
+.card:hover::after{opacity:1}
+.card h3{
+  position:absolute;
+  bottom:12px;
+  left:14px;
+  font-size:18px;
+  opacity:0;
+  transition:.3s;
+}
+.card:hover h3{opacity:1}
+
+@keyframes pop{
+  from{opacity:0;transform:scale(.9)}
+  to{opacity:1}
+}
+</style>
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">😊</div>
-                <h1>THE SMILE FOUNDATION</h1>
-            </a>
-            
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Our Programs <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="education.html">Education</a></li>
-                        <li><a href="shelter.html">Shelter</a></li>
-                        <li><a href="food.html">Food</a></li>
-                        <li><a href="healthcare.html">Healthcare</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="floating-shape shape-1"></div>
-            <div class="floating-shape shape-2"></div>
-            <div class="floating-shape shape-3"></div>
-            <div class="floating-shape shape-4"></div>
-            <div class="floating-shape shape-5"></div>
-            <div class="gradient-overlay"></div>
-        </div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="hero-title animate-on-scroll">Bringing Hope, Building Futures</h2>
-                <p class="hero-subtitle animate-on-scroll">Every smile matters. Join us in our mission to create lasting change in communities across the globe.</p>
-                <div class="hero-buttons animate-on-scroll">
-                    <a href="donate.html" class="btn btn-primary pulse">Donate Now</a>
-                    <a href="about.html" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll to explore</p>
-        </div>
-    </section>
+<header>XPS ANIMATED SHOW</header>
 
-    <!-- Impact Counter -->
-    <section class="impact-counter">
-        <div class="container">
-            <div class="counter-grid">
-                <div class="counter-item">
-                    <div class="counter-number" data-target="12500">0</div>
-                    <p class="counter-label">Children Educated</p>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" data-target="8500">0</div>
-                    <p class="counter-label">Families Sheltered</p>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" data-target="235000">0</div>
-                    <p class="counter-label">Meals Provided</p>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" data-target="7500">0</div>
-                    <p class="counter-label">Medical Camps</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="characters">
+  <a href="kittyamore.html" class="card">
+    <img src="https://ik.imagekit.io/0xwvvgyfso/square-image%20(1).jpg">
+    <h3>KITTY AMORE</h3>
+  </a>
 
-    <!-- Programs Section -->
-    <section class="programs">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title animate-on-scroll">Our Core Programs</h2>
-                <p class="section-subtitle animate-on-scroll">We focus on four key areas to create sustainable change and bring smiles to those in need.</p>
-            </div>
-            
-            <div class="program-cards">
-                <a href="education.html" class="program-card animate-on-scroll">
-                    <div class="program-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Education</h3>
-                    <p>Providing quality education to underprivileged children through schools, scholarships, and learning centers.</p>
-                    <div class="program-link">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                
-                <a href="shelter.html" class="program-card animate-on-scroll">
-                    <div class="program-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Shelter</h3>
-                    <p>Building safe homes and community centers for homeless families and disaster-affected communities.</p>
-                    <div class="program-link">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                
-                <a href="food.html" class="program-card animate-on-scroll">
-                    <div class="program-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Food Security</h3>
-                    <p>Ensuring no one sleeps hungry through community kitchens, food banks, and nutrition programs.</p>
-                    <div class="program-link">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-                
-                <a href="healthcare.html" class="program-card animate-on-scroll">
-                    <div class="program-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Healthcare</h3>
-                    <p>Providing medical care, health camps, and wellness programs to underserved communities.</p>
-                    <div class="program-link">
-                        <span>Learn More</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+  <a href="characters/jerry.html" class="card">
+    <img src="https://i.imgur.com/5b6XG6F.png">
+    <h3>Jerry</h3>
+  </a>
+</div>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content animate-on-scroll">
-                <h2>Your donation can change a life today</h2>
-                <p>Join thousands of donors who are making a difference. 100% of your donation goes directly to our programs.</p>
-                <a href="donate.html" class="btn btn-primary btn-large pulse">Make a Donation</a>
-            </div>
-        </div>
-    </section>
+<script>
+console.log("Home Loaded");
+</script>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <a href="index.html" class="footer-logo">
-                        <div class="logo-icon">😊</div>
-                        <h2>THE SMILE FOUNDATION</h2>
-                    </a>
-                    <p class="footer-description">Bringing hope and happiness to communities in need since 2005. Registered non-profit organization.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="donate.html">Donate</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="annual.html">Annual Report</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Our Programs</h3>
-                    <ul class="footer-links">
-                        <li><a href="education.html">Education</a></li>
-                        <li><a href="shelter.html">Shelter</a></li>
-                        <li><a href="food.html">Food Security</a></li>
-                        <li><a href="healthcare.html">Healthcare</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 1/52 , SECTOR-A , ALIGANJ , LUCKNOW , UTTAR PRADESH , INDIA 226021</li>
-                        <li><i class="fas fa-phone"></i> +91 95111 02384</li>
-                        <li><i class="fas fa-envelope"></i> thesmilefoundation2025@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 The Smile Foundation. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Page Transition Overlay -->
-    <div class="page-transition"></div>
-
-    <script src="script.js"></script>
-  
 </body>
-
 </html>
